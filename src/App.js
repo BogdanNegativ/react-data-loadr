@@ -1,24 +1,38 @@
 import logo from './logo.svg';
 import './App.css';
+import UsersLoader from './components/UsersLoader';
+import React from 'react';
+
+class MyList extends React.Component {
+  render() {
+    console.log(this.props);
+    return (
+      <section>
+        <h2>List of something</h2>
+        <ul>{this.props.children}</ul>
+      </section>
+    )
+  }
+}
+class MyItem extends React.Component {
+  render() {
+    const { title } = this.props;
+    return (
+      <li>{title}</li>
+    )
+  }
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <UsersLoader />
+      <MyList >
+        <MyItem title="title#1" />
+        <MyItem title="title#2" />
+        <MyItem title="title#3" />
+      </MyList>
+    </>
   );
 }
 

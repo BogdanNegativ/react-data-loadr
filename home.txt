@@ -1,0 +1,11 @@
+Додати можливість вибору статі.
+Для коректної роботи необхідно прибрати seed.
+Вибір реалізувати за допомогою radiobuttons.
+Стать повинна змінюватися зразу після вибора
+(керовані компоненти...)
+https://www.pluralsight.com/guides/how-to-use-radio-buttons-in-reactjs
+
+*Радіогрупа і радіобатони це свої власні
+компоненти. Вибір радіобатона реалізувати
+за допомогою children
+https://stasonmars.ru/javascript/pogruzhaemsya-v-raboty-s-children-na-react/
